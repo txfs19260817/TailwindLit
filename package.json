@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@adobe/lit-mobx": "^2.0.0",
+    "daisyui": "^2.1.0",
     "lit": "^2.1.2",
     "mobx": "^6.3.13"
   }

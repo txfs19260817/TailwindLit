@@ -1,3 +1,6 @@
+import { css } from "lit";
+import style from "daisyui/dist/full.css"
+
 export const TW = <T extends LitMixin>(superClass: T): T =>
   class extends superClass {
     connectedCallback() {
@@ -10,4 +13,10 @@ export const TW = <T extends LitMixin>(superClass: T): T =>
 
       this.shadowRoot.append(link);
     }
+
+    /*
+     * Convert string to TemplateStringsArray.
+     * Reference: https://stackoverflow.com/a/50792840
+     */
+    static styles = css({ raw: [`${style}`], ...[`${style}`] } as TemplateStringsArray);
   };
